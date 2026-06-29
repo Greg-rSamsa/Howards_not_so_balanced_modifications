@@ -28,6 +28,7 @@ civic_barbaric_despoilers = {
 				value = ethic_xenophobe
 			}
 			NOR = {
+				text = civic_tooltip_not_fanatic_xenophile
 				value = ethic_fanatic_xenophile
 			}
 		}
