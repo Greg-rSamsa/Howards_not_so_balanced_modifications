@@ -1,7 +1,8 @@
-version="V0.0.2"
+version="V0.0.3"
 tags={
 	"Balance"
 }
 name="Howards' (Not So) Balanced Modifications"
-supported_version="v4.4.*"
 picture="cover.png"
+supported_version="v4.4.*"
+remote_file_id="3754609385"
