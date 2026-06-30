@@ -18,4 +18,8 @@ NGameplay = {
 
     # Reduces cooldown of Subject Agreements by 2,5x times
     AGREEMENT_CHANGE_COOLDOWN_MONTHS 			    = 24	# How often an agreement can be changed in months
+
+    # Significantly reduces policy cooldowns
+    POLICY_YEARS						= 3	# Years a set policy can not be changed for
+    SPECIES_POLICY_YEARS				= 3
 }
