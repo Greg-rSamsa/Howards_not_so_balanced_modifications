@@ -23,3 +23,10 @@ NGameplay = {
     POLICY_YEARS						= 3	# Years a set policy can not be changed for
     SPECIES_POLICY_YEARS				= 3
 }
+
+NAI {
+    # Lowers AI refusing to surrender when not all planets have been occupied
+    # Increases likeness of AI to surrender with fleet power
+    PEACE_DEFENDING_CLAIM_PLANET_FACTOR = -60	# For systems with colonies
+    PEACE_RELATIVE_NAVY_STRENGTH_FACTOR = 115
+}
