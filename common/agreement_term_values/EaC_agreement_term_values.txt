@@ -1,0 +1,1 @@
+# Intentionally empty to override and disable Ethics and Civics Classic's agreement_presets file.
