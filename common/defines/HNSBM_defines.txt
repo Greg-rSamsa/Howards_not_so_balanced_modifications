@@ -22,6 +22,9 @@ NGameplay = {
     # Significantly reduces policy cooldowns
     POLICY_YEARS						= 3	# Years a set policy can not be changed for
     SPECIES_POLICY_YEARS				= 3
+
+    # Reduces truce time by 2
+    TRUCE_YEARS                         = 5
 }
 
 NAI {
