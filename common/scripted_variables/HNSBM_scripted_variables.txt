@@ -1,0 +1,2 @@
+@tier6cost1 = 28000
+@tier6weight1 = 15
