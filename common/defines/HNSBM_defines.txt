@@ -20,16 +20,19 @@ NGameplay = {
     AGREEMENT_CHANGE_COOLDOWN_MONTHS 			    = 24	# How often an agreement can be changed in months
 
     # Significantly reduces policy cooldowns
-    POLICY_YEARS						= 3	# Years a set policy can not be changed for
-    SPECIES_POLICY_YEARS				= 3
+    POLICY_YEARS						            = 3	# Years a set policy can not be changed for
+    SPECIES_POLICY_YEARS				            = 3
 
     # Reduces truce time by 2
-    TRUCE_YEARS                         = 5
+    TRUCE_YEARS                                     = 5
+
+    # Buffed Research Agreement bonus by 3x
+    RESEARCH_AGREEMENT_SPEED_MULT                   = 0.75
 }
 
 NAI {
     # Lowers AI refusing to surrender when not all planets have been occupied
     # Increases likeness of AI to surrender with fleet power
-    PEACE_DEFENDING_CLAIM_PLANET_FACTOR = -60	# For systems with colonies
-    PEACE_RELATIVE_NAVY_STRENGTH_FACTOR = 115
+    PEACE_DEFENDING_CLAIM_PLANET_FACTOR             = -80	# For systems with colonies
+    PEACE_RELATIVE_NAVY_STRENGTH_FACTOR             = 115
 }
