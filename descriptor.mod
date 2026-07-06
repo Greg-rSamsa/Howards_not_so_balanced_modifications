@@ -3,6 +3,6 @@ tags={
 	"Balance"
 }
 name="Howards' (Not So) Balanced Modifications"
-picture="cover.png"
+picture="thumbnail.png"
 supported_version="v4.4.4"
 remote_file_id="3754609385"
