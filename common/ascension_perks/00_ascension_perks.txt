@@ -680,35 +680,13 @@ ap_wanderlust = {
 	}
 
 	triggered_modifier = {
-		potential = {
-			calc_true_if = {
-				amount >= 4
-				has_country_flag = ancient_wonders_completed
-				has_country_flag = antique_threat_completed
-				has_country_flag = enclave_completed
-				has_country_flag = galactic_landmark_completed
-				has_country_flag = marauder_completed
-				has_country_flag = natural_spectacle_completed
-				has_country_flag = precursor_completed
-				has_country_flag = space_ecology_completed
-				check_variable = { which = ancient_wonders_system_count value = 0 }
-				check_variable = { which = antique_threat_system_count value = 0 }
-				check_variable = { which = enclave_system_count value = 0 }
-				check_variable = { which = galactic_landmark_system_count value = 0 }
-				check_variable = { which = marauder_system_count value = 0 }
-				check_variable = { which = natural_spectacle_system_count value = 0 }
-				check_variable = { which = precursor_system_count value = 0 }
-				check_variable = { which = space_ecology_system_count value = 0 }
-			}
-		}
 		planet_max_districts_add = 1
 		leaders_upkeep_mult = -0.1
 	}
 
 	triggered_modifier = {
 		potential = {
-			calc_true_if = {
-				amount >= 8
+			OR = { #somehow, we need a redundancy here to not get the modifier when initially picking up the AP (even though it gets cleared on monthly tick)
 				has_country_flag = ancient_wonders_completed
 				has_country_flag = antique_threat_completed
 				has_country_flag = enclave_completed
@@ -717,14 +695,41 @@ ap_wanderlust = {
 				has_country_flag = natural_spectacle_completed
 				has_country_flag = precursor_completed
 				has_country_flag = space_ecology_completed
-				check_variable = { which = ancient_wonders_system_count value = 0 }
-				check_variable = { which = antique_threat_system_count value = 0 }
-				check_variable = { which = enclave_system_count value = 0 }
-				check_variable = { which = galactic_landmark_system_count value = 0 }
-				check_variable = { which = marauder_system_count value = 0 }
-				check_variable = { which = natural_spectacle_system_count value = 0 }
-				check_variable = { which = precursor_system_count value = 0 }
-				check_variable = { which = space_ecology_system_count value = 0 }
+			}
+			calc_true_if = {
+				amount >= 4
+				OR = {
+					has_country_flag = ancient_wonders_completed
+					check_variable = { which = ancient_wonders_system_count value = 0 }
+				}
+				OR = {
+					has_country_flag = antique_threat_completed
+					check_variable = { which = antique_threat_system_count value = 0 }
+				}
+				OR = {
+					has_country_flag = enclave_completed
+					check_variable = { which = enclave_system_count value = 0 }
+				}
+				OR = {
+					has_country_flag = galactic_landmark_completed
+					check_variable = { which = galactic_landmark_system_count value = 0 }
+				}
+				OR = {
+					has_country_flag = marauder_completed
+					check_variable = { which = marauder_system_count value = 0 }
+				}
+				OR = {
+					has_country_flag = natural_spectacle_completed
+					check_variable = { which = natural_spectacle_system_count value = 0 }
+				}
+				OR = {
+					has_country_flag = precursor_completed
+					check_variable = { which = precursor_system_count value = 0 }
+				}
+				OR = {
+					has_country_flag = space_ecology_completed
+					check_variable = { which = space_ecology_system_count value = 0 }
+				}
 			}
 		}
 		planet_max_districts_add = 1
