@@ -1596,7 +1596,7 @@ ap_technological_ascendancy = {
 		rare_tech_draw_chance_mult = 0.5
 	}
 
-	custom_tooltip_with_modifiers = ap_technological_ascendancy_tt
+	custom_tooltip = ap_technological_ascendancy_tt
 
 	potential = {
 		NOT = {
