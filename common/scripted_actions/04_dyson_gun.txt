@@ -1,0 +1,40 @@
+dyson_shoot = {
+	user_scope = megastructure
+	scope = galactic_object
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "no_targeting_own_colonies"
+			solar_system = {
+				NOT = {
+					any_system_planet = {
+						is_colony = yes
+						is_owned_by = fromfrom
+					}
+				}
+			}
+		}
+	}
+	# This - Target System
+	# From - Firing Megastructure
+	ai = {
+		ai_minister = military
+		weight = {
+			base = 0
+		}
+	}
+
+	icon = GFX_ship_class_conduit
+	icon_selected = GFX_ship_class_conduit
+
+	on_completed = on_dyson_shoot
+	on_started = on_dyson_shoot_started
+	context_menu_name = "dyson_shot_action"
+	activity_key = "dyson_shot_activity_key"
+	tooltip = dyson_gun_ship_button
+	cooldown = 20
+	required_progress = 140.5
+
+	begin_anim_state = "working"
+	progress_anim_state = "working_looping"
+}
