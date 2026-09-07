@@ -67,7 +67,12 @@ Removed:
 
 > `PEACE_RELATIVE_NAVY_STRENGTH_FACTOR` increased from `50` to `75`
 
+## Federations Perks
+**Increased research sharing multiplier for research federations**
+> `federation_research_sharing_mult` increased from `0.25` to `0.80`
 
+
+## Dyson Guns AI
 **Disabled Dyson Gun for AI**
 
 They spam the shit out of it and makes a horrible noise, it's not even that good
