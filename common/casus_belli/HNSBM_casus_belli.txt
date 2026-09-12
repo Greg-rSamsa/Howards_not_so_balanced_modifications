@@ -1,0 +1,82 @@
+cb_skirmish = {
+    show_notification = no
+    show_in_diplomacy = yes
+
+    is_valid = {
+        NOT = {
+            is_in_federation_with = from
+        }
+        is_subject = no
+        from = {
+            is_subject = no
+        }
+        is_neighbor_of = from
+    }
+}
+
+cb_demilitarise = {
+    show_in_diplomacy = yes
+    show_notification = no
+
+    potential = {
+        is_country_type = default
+        exists = from
+        NOR = {
+            has_ethic = ethic_gestalt_consciousness
+            is_in_federation_with = from
+        }
+    }
+
+    is_valid = {
+        is_country_type = default
+        NOT = {
+            has_policy_flag = no_wars
+        }
+        OR = {
+            is_rival = FROM
+            AND = {
+                OR = {
+                    is_active_resolution = resolution_rulesofwar_last_resort_doctrine
+                    is_active_resolution = resolution_rulesofwar_demobilization_initiative
+                }
+                FROM = {
+                    OR = {
+                        has_modifier = resolution_denounced
+                        in_breach_of = resolution_rulesofwar_last_resort_doctrine
+                        in_breach_of = resolution_rulesofwar_demobilization_initiative
+                    }
+                }
+            }
+        }
+        from = { is_country_type = default }
+        from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+        NOT = { is_overlord_to = FROM }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+    proxy_war_resources = {
+        category = proxy_war
+        cost = {
+            influence = 9999
+        }
+    }
+}
+
+
+cb_cordon = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    is_valid = {
+        NOT = {
+            is_in_federation_with = from
+        }
+        is_subject = no
+        from = {
+            is_subject = no
+        }
+        is_neighbor_of = from
+    }
+}

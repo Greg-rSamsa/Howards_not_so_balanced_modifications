@@ -1,4 +1,12 @@
 # Howards Not So Balanced Modifications
+
+## War Goals
+
+Added:
+- Border skirmish
+- Demilitarise
+- Cordon off
+
 ## Ascension Perks
 Removed:
 - Galactic Wonders AP

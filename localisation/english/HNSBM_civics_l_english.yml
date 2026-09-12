@@ -1,13 +1,26 @@
 ﻿l_english:
-  # Vassal Contracts Unleashed
-  resource_subsidies_energy: "Energy"
-  resource_subsidies_minerals: "Minerals"
-  resource_subsidies_food: "Food"
-  resource_subsidies_alloys: "Alloys"
-  resource_subsidies_consumer_goods: "Consumer Goods"
-  resource_subsidies_volatile_motes: "Volatile Motes"
-  resource_subsidies_exotic_gases: "Exotic Gases"
-  resource_subsidies_rare_crystals: "Rare Crystals"
-  resource_subsidies_minor_artifacts: "Minor Artifacts"
-  resource_subsidies_unity: "Unity"
-  resource_subsidies_influence: "Influence"
+  #############
+  # War goals #
+  #############
+
+  # Border Skirmish
+  war_goal_wg_skirmish: "Border Skirmish"
+  war_goal_wg_skirmish_desc: "Our neighbor has been posturing against us for long enough."
+  war_goal_wg_skirmish_defender: "Border Skirmish Defense"
+  war_goal_wg_skirmish_defender_desc: "Our neighbor is attempting to seize our land through a skirmish."
+  casus_belli_cb_skirmish: "Skirmish"
+  wg_prohibit_status_quo: "We must show our might to our enemy."
+  wg_skirmish_accept: "§Y[From.GetName]§! is humiliated, reducing their §Y$mod_country_base_influence_produces_mult$§! and Pop Happiness for §Y5§! years\n§Y[Root.GetName]§! gains §G+200§! £influence£\n[Root.GetEnmityEclipse]"
+
+  # Demilitarise
+  war_goal_wg_demilitarise:0 "Pacify"
+  war_goal_wg_demilitarise_desc:0 "We go to war to de-fang a potentially dangerous neighbour before they can strike us first."
+  war_goal_wg_demilitarise_effect:0 "§Y[From.GetName]§! is demilitarised, dismantling most of their armed forces and forcing their government to adopt more peaceful policies. We shall have have peace in our time."
+  casus_belli_cb_demilitarise:0 "Demilitarise"
+
+  # Cordon
+  wg_cordoned: "Cordoned off"
+  wg_cordoned_desc: "We have been cordoned off and have restricted access to trade."
+  war_goal_wg_cordon: "Cordon off"
+  war_goal_wg_cordon_desc: "We must cordon off our neighbor to prevent them from taking the financial high ground."
+  casus_belli_cb_cordon: "Cordon off"

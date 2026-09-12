@@ -1,0 +1,5 @@
+wg_cordoned = {
+    country_trade_fee = 0.25
+    planet_traders_trade_produces_mult = -0.25
+    country_unity_produces_mult = -0.05
+}

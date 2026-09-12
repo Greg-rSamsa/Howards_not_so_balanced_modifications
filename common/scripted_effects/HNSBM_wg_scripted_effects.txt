@@ -1,0 +1,97 @@
+demilitarise_effect = {
+    hidden_effect = {
+        every_owned_ship = {
+            limit = { is_ship_class = shipclass_military }
+            random = {
+                chance = 50
+                if = {
+                    limit = {
+                        exists = leader
+                    }
+                    leader = {
+                        unassign_leader = this
+                    }
+                }
+                delete_ship = this
+            }
+        }
+        every_owned_army = {
+            limit = { is_defensive_army = no }
+            if = {
+                limit = {
+                    exists = leader
+                }
+                leader = {
+                    unassign_leader = this
+                }
+            }
+            remove_army = yes
+        }
+        set_policy = {
+            policy = economic_policy
+            option = economic_policy_civilian
+            cooldown = yes
+        }
+        set_policy = {
+            policy = orbital_bombardment
+            option = orbital_bombardment_selective
+            cooldown = yes
+        }
+        set_policy = {
+            policy = war_philosophy
+            option = no_wars
+            cooldown = yes
+        }
+        set_policy = {
+            policy = war_doctrine
+            option = defense_in_depth_doctrine
+            cooldown = yes
+        }
+        if = {
+            limit = {
+                has_relic = r_pox_sample
+            }
+            remove_relic = r_pox_sample
+        }
+        if = {
+            limit = {
+                has_relic = r_ancient_sword
+            }
+            remove_relic = r_ancient_sword
+        }
+        every_subject = {
+            set_policy = {
+                policy = economic_policy
+                option = economic_policy_civilian
+                cooldown = yes
+            }
+            set_policy = {
+                policy = orbital_bombardment
+                option = orbital_bombardment_selective
+                cooldown = yes
+            }
+            set_policy = {
+                policy = war_philosophy
+                option = no_wars
+                cooldown = yes
+            }
+            set_policy = {
+                policy = war_doctrine
+                option = defense_in_depth_doctrine
+                cooldown = yes
+            }
+            if = {
+                limit = {
+                    has_relic = r_pox_sample
+                }
+                remove_relic = r_pox_sample
+            }
+            if = {
+                limit = {
+                    has_relic = r_ancient_sword
+                }
+                remove_relic = r_ancient_sword
+            }
+        }
+    }
+}

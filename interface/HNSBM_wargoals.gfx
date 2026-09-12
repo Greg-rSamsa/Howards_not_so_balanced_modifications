@@ -1,0 +1,18 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_wg_skirmish"
+        texturefile = "gfx/interface/icons/diplomacy/diplomacy_opinion.dds"
+    }
+
+    spriteType = {
+        name = "GFX_wg_demilitarise"
+        texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+        noOfFrames = 2
+    }
+
+    spriteType = {
+        name = "GFX_wg_cordon"
+        texturefile = "gfx/interface/icons/diplomacy/diplomacy_closed_borders.dds"
+        noOfFrames = 2
+    }
+}

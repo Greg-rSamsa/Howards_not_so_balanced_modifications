@@ -1,0 +1,171 @@
+wg_skirmish = {
+
+    casus_belli = cb_skirmish
+    set_defender_wargoal = wg_skirmish_defender
+
+    galactic_empire_joins_defender = { always = no }
+    secret_fealties_join_attacker = no
+    total_war = no
+
+    cede_claims = yes
+
+    war_exhaustion = 2
+    surrender_acceptance = 25
+    threat_multiplier = 0.25
+    show_claims_in_description = yes
+
+    forbidden_peace_offers = {
+        status_quo = wg_prohibit_status_quo
+    }
+
+    possible = {
+        always = yes
+    }
+
+    on_accept = {
+        custom_tooltip = wg_skirmish_accept
+        this = {
+            add_resource = { influence = 200 }
+        }
+        from = {
+            add_modifier = { modifier = humiliated days = 1825 }
+        }
+    }
+
+    ai_weight = {
+        weight = 15
+        modifier = {
+            factor = 0
+            has_total_war_cb = yes
+        }
+    }
+}
+
+wg_skirmish_defender = {
+    casus_belli = cb_skirmish
+    hide = always
+
+    total_war = no
+    cede_claims = no
+
+    war_exhaustion = 1.5
+    surrender_acceptance = 25
+    show_claims_in_description = yes
+
+    defender_default = yes
+
+    forbidden_peace_offers = {
+        status_quo = wg_prohibit_status_quo
+    }
+
+    possible = {
+        always = no
+    }
+
+    on_accept = {
+        custom_tooltip = wg_skirmish_accept
+        this = {
+            add_resource = { influence = 200 }
+        }
+        from = {
+            add_modifier = { modifier = humiliated days = 1825 }
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+wg_demilitarise = {
+    casus_belli = cb_demilitarise
+    hide_if_no_cb = yes
+    total_war = no
+    release_occupied_systems_on_status_quo = no
+    cede_claims = no
+
+    surrender_acceptance = -50
+
+    potential = {
+        always = yes
+    }
+
+    possible = {
+        root = { is_valid_target_demilitarise = no }
+        from = { is_valid_target_demilitarise = yes }
+        custom_tooltip = {
+            fail_text = cannot_use_against_custodian
+            from = { is_galactic_custodian = no }
+        }
+        custom_tooltip = {
+            fail_text = cannot_use_against_emperor
+            OR = {
+                from = { is_galactic_emperor = no }
+                is_galactic_community_member = no
+            }
+        }
+        custom_tooltip = {
+            fail_text = pax_galactica_active
+            NAND = {
+                is_active_resolution = resolution_emperor_pax_galactica
+                is_galactic_community_member = yes
+                from = { is_galactic_community_member = yes }
+            }
+        }
+    }
+
+    on_accept = {
+        custom_tooltip = war_goal_wg_demilitarise_effect
+        custom_tooltip = wg_humiliation_accept
+        from = {
+            add_modifier = { modifier = humiliated days = 3600 }
+            demilitarise_effect = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            has_ethic = ethic_gestalt_consciousness
+        }
+    }
+}
+
+# common/war_goals/cordon_wg.txt
+
+wg_cordon = {
+    casus_belli = cb_cordon
+    hide_if_no_cb = yes
+
+    total_war = no
+    cede_claims = no
+    release_occupied_systems_on_status_quo = no
+
+    war_exhaustion = 1.5
+    surrender_acceptance = 30
+
+    possible = { 
+        is_rival = from
+        #is_rival_economically_superior = yes
+    }
+    
+    forbidden_peace_offers = {
+        status_quo = wg_prohibit_status_quo
+    }
+
+    on_accept = {
+        from = {
+            remove_communications = this
+            add_modifier = {
+                modifier = "wg_cordoned"
+                days = 3600
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 10
+        modifier = { factor = 0 has_total_war_cb = yes }
+    }
+}
